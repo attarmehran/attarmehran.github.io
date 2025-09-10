@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Home</title>
+  <style>
+    :root{
+      --bg:#f7f7f7; --card:#ffffff; --text:#222; --muted:#555; --link:#2a6fdb; --accent:#0f172a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--text); background:var(--bg);}    
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout */
+    .container{display:grid; grid-template-columns: 280px 1fr; gap:28px; max-width:1200px; margin:0 auto; padding:28px;}
+    aside{position:sticky; top:24px; align-self:start; background:var(--card); border:1px solid #eaeaea; border-radius:14px; padding:22px;}
+    main{background:var(--card); border:1px solid #eaeaea; border-radius:14px; padding:28px;}
+
+    /* Sidebar */
+    .avatar{width:100%; border-radius:12px; border:1px solid #ddd;}
+    .name{font-size:28px; font-weight:800; margin:16px 0 8px; letter-spacing:.2px}
+    .menu{list-style:none; padding:0; margin:14px 0 0}
+    .menu li{margin:.35rem 0}
+
+    /* Main content */
+    h1{font-size:28px; margin:0 0 12px}
+    h2{font-size:22px; margin:26px 0 10px; border-bottom:1px solid #eee; padding-bottom:6px}
+    .muted{color:var(--muted)}
+    .tag{display:inline-block; font-size:12px; padding:2px 8px; border:1px solid #e5e5e5; border-radius:999px; margin-right:6px; color:#444}
+    .edu-item{margin:10px 0}
+    .edu-item b{display:block}
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .container{grid-template-columns:1fr;}
+      aside{position:static}
+    }
+
+    /* Small print */
+    footer{max-width:1200px; margin:12px auto 40px; padding:0 28px; color:#777; font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <img class="avatar" src="assets/profile.jpg" alt="Profile photo" />
+      <div class="name">Your Name</div>
+      <div class="muted">Senior AI/ML Engineer</div>
+      <ul class="menu">
+        <li><a href="#about">Home</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <h3 style="margin:18px 0 8px; font-size:16px">Links</h3>
+      <ul class="menu">
+        <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.researchgate.net" target="_blank" rel="noopener">ResearchGate</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>
+          I'm a <b>Senior AI/ML Engineer</b> (PhD) with experience delivering production-grade ML systems.
+          I focus on <b>GenAI</b>, <b>LLMs</b>, <b>reinforcement learning</b>, and <b>multimodal/physical AI</b>.
+          I've led cross-functional teams and shipped high-impact products from data to deployment.
+        </p>
+        <p class="muted">Email: your.name [at] example [dot] com • Location: City, Country</p>
+        <div>
+          <span class="tag">LLMs</span><span class="tag">RLHF</span><span class="tag">Control</span><span class="tag">Optimization</span>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>Lastname, Y. (2025). <i>Title of your paper</i>. Journal/Conference.</li>
+          <li>Lastname, Y. (2024). <i>Another paper</i>. Venue.</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <ul>
+          <li><b>Project One</b> — one-line description with a <a href="#">link</a>.</li>
+          <li><b>Project Two</b> — short blurb; technologies used.</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <b>Ph.D., Electrical & Computer Engineering (AI)</b>
+          2017–2021, University Name, Country
+          <div class="muted">Awards / distinctions here</div>
+        </div>
+        <div class="edu-item">
+          <b>M.Sc., Electrical & Computer Engineering</b>
+          2014–2016, University Name, Country
+        </div>
+        <div class="edu-item">
+          <b>B.Sc., Electrical & Computer Engineering</b>
+          2010–2014, University Name, Country
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Best way to reach me is by email. I'm open to research collaborations and consulting.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Your Name. Built with plain HTML/CSS and hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
